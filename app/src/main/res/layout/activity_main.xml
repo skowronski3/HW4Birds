@@ -4,15 +4,72 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Report">
 
-    <TextView
+    <EditText
+        android:id="@+id/editTextPersonName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginTop="50dp"
+        android:ems="10"
+        android:hint="Enter name of viewer"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/editTextBirdName"
+        app:layout_constraintTop_toBottomOf="@+id/editTextZIPCode" />
 
+    <TextView
+        android:id="@+id/textViewPersonName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Person Name"
+        app:layout_constraintBottom_toTopOf="@+id/editTextPersonName"
+        app:layout_constraintStart_toStartOf="@+id/editTextZIPCode" />
+
+    <EditText
+        android:id="@+id/editTextZIPCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:ems="10"
+        android:hint="Enter zip code"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/editTextBirdName"
+        app:layout_constraintTop_toBottomOf="@+id/editTextBirdName" />
+
+    <TextView
+        android:id="@+id/textViewZipCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Zip Code"
+        app:layout_constraintBottom_toTopOf="@+id/editTextZIPCode"
+        app:layout_constraintStart_toStartOf="@+id/editTextZIPCode" />
+
+    <EditText
+        android:id="@+id/editTextBirdName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:ems="10"
+        android:hint="Enter name of bird"
+        android:inputType="textPersonName"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="68dp" />
+
+    <TextView
+        android:id="@+id/textViewBirdName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name of Bird"
+        app:layout_constraintBottom_toTopOf="@+id/editTextBirdName"
+        app:layout_constraintStart_toStartOf="@+id/editTextBirdName" />
+
+    <Button
+        android:id="@+id/buttonSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPersonName" />
 </androidx.constraintlayout.widget.ConstraintLayout>
